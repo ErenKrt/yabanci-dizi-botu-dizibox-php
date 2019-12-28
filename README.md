@@ -31,10 +31,10 @@ Php;
    $yb->ConvertTitle("dizi ismi"); // Args: Array dönütü olan titleleri baş harfaları büyük olmak üzere değiştirir.
    $yb->DiziSayfasi("The Witcher"); // Args: Dizi Adı
    $yb->DiziBolumleri("The Witcher"); // Args: Dizi Adı
-   $yb->DiziBolumleri("The 100","2"); // Args: Dizi Adı , Sayfa
+   $yb->DiziBolumleri("The 100","2"); // Args: Dizi Adı , Sayfa[boş olabilir]
    $yb->Bolum("Mr. Robot","4.Sezon 13.Bölüm",6); // Args: Dizi Adı, Sezon bölüm, Player[boş olabilir]
-   $yb->PopulerSon(2); // Args: Sayfa
-   $yb->YeniEklenen(1); // Args: Sayfa
+   $yb->PopulerSon(2); // Args: Sayfa[boş olabilir]
+   $yb->YeniEklenen(1); // Args: Sayfa[boş olabilir]
 
   // Cookie komutlar
    $yb->WithCookie(); // Cookieler dahil edilir
