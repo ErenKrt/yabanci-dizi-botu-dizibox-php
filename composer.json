@@ -1,0 +1,7 @@
+{
+    "require": {
+        "spatie/regex": "^1.4",
+        "php-curl-class/php-curl-class": "^8.6",
+        "campo/random-user-agent": "^1.3"
+    }
+}
