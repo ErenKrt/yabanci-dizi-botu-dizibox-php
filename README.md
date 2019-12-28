@@ -21,6 +21,7 @@ Composer;
 
 Php;
 ```php
+   use \eperen\YabanciDizi;
    require 'class.php';
 ```
 
@@ -57,7 +58,7 @@ print_r(json_encode($xd));
 
 ```json
 
-{"Diziler":[{ //Dizi tekil dönüt
+{"Diziler":[{ // Dizi tekil dönüt
 "Title":"The Flash 6.Sezon 8.B\u00f6l\u00fcm",
 "isim":"THE FLASH",
 "Sezon":"6.SEZON ",
