@@ -70,7 +70,7 @@ print_r(json_encode($xd));
 "pagination":{"bulunan":"2","maks":"97"}} // Sayfalama sistemi için ek dönüt
 ```
 
-Kullanım detayları için [Ornekler](https://github.com/ErenKrt/yabanci-dizi-botu-dizibox-php/ornekler) sayfasına bakabilirsiniz.
+Kullanım detayları için [Ornekler](https://github.com/ErenKrt/yabanci-dizi-botu-dizibox-php/tree/master/ornekler) sayfasına bakabilirsiniz.
 
 ---
 Geliştirci: &copy; [ErenKrt](https://www.instagram.com/ep.eren/)
