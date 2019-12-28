@@ -15,8 +15,8 @@ Composer;
    composer install
 ```
    > spatie/regex [https://github.com/spatie/regex]
-   php-curl-class/php-curl-class [https://github.com/php-curl-class/php-curl-class]
-   campo/random-user-agent[https://github.com/joecampo/random-user-agent]
+   > php-curl-class/php-curl-class [https://github.com/php-curl-class/php-curl-class]
+   > campo/random-user-agent[https://github.com/joecampo/random-user-agent]
    ---
 
 Php;
