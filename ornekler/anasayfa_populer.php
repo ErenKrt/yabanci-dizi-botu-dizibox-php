@@ -44,7 +44,7 @@ $anasayfa= $yb->PopulerSon($sayfa);
                 ?>
                 <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
                 <div class="card">
-                <a href="izle.php?dizi=<?php echo urlencode($Sdizi["Title"]); ?>&isim=<?php echo urlencode($yb->ConvertTitle($Sdizi["isim"])); ?>"><img class="card-img-top" src="<?php echo $Sdizi["img"]; ?>"></a>
+                <a href="izle.php?dizi=<?php echo urlencode($Sdizi["Title"]); ?>&isim=<?php echo urlencode($yb->ConvertTitle($Sdizi["isim"])); ?>"><img class="card-img-top" src="data:image/png;base64,<?php echo $Sdizi["img"]; ?>"></a>
                     <div class="card-block">
                          <figure class="profile profile-inline">
                             <img src="<?php echo $Sdizi["ceviri"]; ?>" class="profile-avatar" alt="">

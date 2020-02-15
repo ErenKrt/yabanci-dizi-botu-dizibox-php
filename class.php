@@ -11,6 +11,7 @@
  * @mail kurteren07@gmail.com
  * @İnstagram Ep.Eren
  * @date 28.12.2019
+ * @update 15.02.2020
  */
 namespace eperen;
 
@@ -100,9 +101,11 @@ class YabanciDizi
         $str = trim($str, $options['delimiter']);
         return $options['lowercase'] ? mb_strtolower($str, 'UTF-8') : $str;
       }
+
     public function ConvertTitle($yazi){
         return mb_convert_case(mb_strtolower($yazi),MB_CASE_TITLE, "UTF-8");
     }
+
     public $baseurl="https://www.dizibox.pw/";
     public $UserAgent;
     public $Cookie=array();
@@ -157,8 +160,12 @@ class YabanciDizi
             $Curl->close();
             throw new Exception($Curl->errorCode . ': ' . $Curl->errorMessage);
         }else{ 
-           
-            if(strpos($Curl->responseHeaders["content-type"],"json")){
+          
+            if(strpos($Curl->responseHeaders["content-type"],"jpeg")){
+                return base64_encode($Curl->response);
+            }else if(strpos($Curl->responseHeaders["content-type"],"png")){
+                return base64_encode($Curl->response);
+            }else if(strpos($Curl->responseHeaders["content-type"],"json")){
                 return $Curl->response;
             }else{
                 return str_replace(array("\n", "\r", "\t"), NULL, trim($Curl->response));
@@ -167,6 +174,9 @@ class YabanciDizi
     }
     public function WithCookie(){
         $this->Cookie=array("dbxu",round(microtime(true) * 1000));
+    }
+    public function Image($uri){
+        return $this->Curl($uri,$this->baseurl,1);
     }
     public function DiziSayfasi($dizi)
     {
@@ -314,7 +324,7 @@ class YabanciDizi
         $dil=$resimler[0]->group(1);
         $resim= $resimler[1]->group(1);
         
-        return(array("Title"=>$title,"isim"=>$dizi,"Sezon"=>$sezon,"Bolum"=>$bolum,"YayinGun"=>$gun,"ceviri"=>$dil,"img"=>$resim));
+        return(array("Title"=>$title,"isim"=>$dizi,"Sezon"=>$sezon,"Bolum"=>$bolum,"YayinGun"=>$gun,"ceviri"=>$dil,"img"=>$this->Image($resim)));
         
     }
     public function PopulerSon($sayfa=1)

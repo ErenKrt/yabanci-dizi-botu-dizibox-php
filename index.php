@@ -23,8 +23,8 @@ $yb->WithCookie();
 //$xd= $yb->DiziBolumleri("The Witcher");
 //$xd= $yb->DiziBolumleri("The 100","2");
 //$xd= $yb->Bolum("Mr. Robot","4.Sezon 13.Bölüm",6);
-$xd= $yb->PopulerSon(2);
-//$xd= $yb->YeniEklenen(1);
+//$xd= $yb->Image("https://www.dizibox.pw/wp-content/uploads/afisler/macgyver-220x140.jpg");
+$xd= $yb->YeniEklenen(1);
 
 /// Anasayfadan dizi yakalayıp gösterme BASLANGİC
 
@@ -38,4 +38,4 @@ $xd= $yb->PopulerSon(2);
 
 //$xd=$yb->AutoComplete("mr"); // WithCookie
 
-print_r(json_encode($xd));
+print_r($xd);
