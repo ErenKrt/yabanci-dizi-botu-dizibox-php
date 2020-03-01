@@ -2,6 +2,9 @@
 
 Botun çalışma prensibi bir kullanıcı gibi  **dizibox.pw** adresine girerek **HtmlParser** mantığında alanları (**div**/**section**/**vb..**) parçalıyor ve size **array** olarak döndürüyor
 
+> .Net Sürüm: https://github.com/ErenKrt/DiziboxBotSharp
+
+
 ---
 - [Bilgilendirme](#bilgilendirme)
 - [Kurulum](#kurulum)
